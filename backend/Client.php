@@ -4,6 +4,8 @@ include_once('Connector.php');
 class Client extends Connector
 {
 	private $hookup;
+	public $table;
+	public $column;
 
 	public function __construct()
 	{
@@ -20,7 +22,40 @@ class Client extends Connector
 		return $result;
 	}
 
+	public function table($name)
+	{
+		return $this->table = $name;
+	}
+
+	public function column($name)
+	{
+		return $this->column = $name;
+	}
+
+	public function insert($table , $column, $value)
+	{
+		$q = "INSERT INTO $table ( $column ) VALUES (' $value ')";
+		$this->query($q);
+		echo 'Done';
+	}
+
+	public function select($table, $column)
+	{
+		$q = "SELECT $column FROM $table";
+		$this->query($q);
+		echo 'Done';
+	}
+
+	public function update()
+	{
+		
+	}
 }
 
 $use = new client();
+
+
+$table = $use->table('user');
+$column = $use->column('name');
+$use->select($table, $column);
 ?>
