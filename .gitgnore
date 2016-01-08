@@ -1,0 +1,3 @@
+//ignoree dist folder 
+web-app/app/dist/
+web-app/app/bower_components/
