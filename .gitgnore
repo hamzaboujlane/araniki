@@ -1,3 +1,6 @@
-//ignoree dist folder 
-web-app/app/dist/
-web-app/app/bower_components/
+//ignore dist folder 
+app/bower_components
+.sass-cache
+node_modules
+.tmp
+app/dist
