@@ -45,11 +45,6 @@ class Client extends Connector
 		$this->query($q);
 		echo 'Done';
 	}
-
-	public function update()
-	{
-		
-	}
 }
 
 $use = new client();
@@ -57,5 +52,6 @@ $use = new client();
 
 $table = $use->table('user');
 $column = $use->column('name');
-$use->select($table, $column);
+$value = 'hamza';
+$use->insert($table, $column, $value);
 ?>
