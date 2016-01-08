@@ -4,7 +4,7 @@ interface IConfig
 	CONST HOST = 'localhost';
 	CONST USER = 'root';
 	CONST PSWD = '@open@';
-	CONST NAME = 'aranaki';
+	CONST NAME = 'araniki';
 
 }
 ?>
